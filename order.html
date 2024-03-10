@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="./js/app.js"></script>
+    <title>Záverečný projekt</title>
+</head>
+<body>
+    <!-- Header - start -->
+    <header>
+    <!-- Navbar - start-->
+    <nav>
+        <!-- Hidden navbar - start-->
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="index.html">Domov</a></li>
+            <li><a href="galeria.html">Galéria</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="order.html">Order now</a></li>
+
+        </ul>   
+        <!-- Hidden navbar - end-->    
+
+        <!-- Shown navbar - start-->
+        <ul>
+            <li class="logo"><a href="#"><img src="./img/logo.png" style="width: 150px;"></a></li>
+            <li class="hideOnMobile"><a href="index.html">Domov</a></li>
+            <li class="hideOnMobile"><a href="galeria.html">Galéria</a></li>
+            <li class="hideOnMobile"><a href="kontakt.html">Kontakt</a></li>
+            <li class="hideOnMobile"><a href="order.html">Order Now</a></li>
+            <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+        <!-- Show navbar - end-->
+    </nav>
+    <!-- Navbar - end-->
+    </header>
+    <!-- Header - end -->
+
+
+    <!-- Mian - start -->   
+    <main>   
+        <section>
+            <div class="coffee-order">
+                <div class="coffee-text-order">
+                    <!-- Coffee table - start -->
+                    <!-- kreatívny bod v js (po kliknutí na názov kávy sa pod tabuľkou zobrazí jej popis s obrázkom)-->
+                    <table id="salesTable">
+                        <thead>
+                            <tr>
+                                <th>Káva</th>
+                                <th>Množství</th>
+                                <th>Cena za jednotku</th>
+                                <th>Celková cena</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td onclick="toggleDescription('Espresso')"><h1>Espresso</h1></td>
+                                <td>10 kg</td>
+                                <td>1.70 €/kg</td>
+                                <td>17.00 €</td>
+                                <td><button class="buy-now" onclick="buyCoffee('Espresso')">Kúpiť</button></td>
+                            </tr>
+                            <tr>
+                                <td onclick="toggleDescription('Cappuccino')"><h1>Cappuccino</h1></td>
+                                <td>5 kg</td>
+                                <td>3.00 €/kg</td>
+                                <td>15.00 €</td>
+                                <td><button class="buy-now" onclick="buyCoffee('Cappuccino')">Kúpiť</button></td>
+                            </tr>
+                            <tr>
+                                <td onclick="toggleDescription('Americano')"><h1>Americano</h1></td>
+                                <td>8 kg</td>
+                                <td>2.00 €/kg</td>
+                                <td>16.00 €</td>
+                                <td><button class="buy-now" onclick="buyCoffee('Americano')">Kúpiť</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div id="descriptions">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Coffee table - end -->
+        
+    </main>
+    <!-- Mian - end -->
+
+
+    <!-- Footer - start -->
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h3>Informácie</h3>
+                <br>
+                <ul>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Preskúmajte stránku</h3>
+                <br>
+                <ul>
+                    <li><a href="galeria.html">Galéria</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Social</h3>
+                <br>
+                <ul>
+                    <li>Email:<a href="mailto:premium.qualitycoffe@gamil.com"> premium.qualitycoffe@gamil.com</a></li>
+                    <li>Phone:<a href="tel:+421 997 774 355"> +421 997 774 355</a></li>
+                    <li><a href="https://www.google.com/maps/d/u/0/viewer?mid=1wJfVSIAOQdzaFUUIehKLDNtX6Rk&hl=sk&ll=48.308953658345104%2C18.09130962647539&z=18">Location</a></li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <p>© 2023 Vytvoril: <strong>Erik Javor</strong></p>
+    </footer>
+    <!-- Footer - end -->
+    
+
+
+
+
+
+
+
+
+    
+
+</body>
+</html>

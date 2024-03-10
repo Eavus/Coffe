@@ -1,0 +1,734 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: PepperidgeScript;
+    src: url(../fonts/PepperidgeScript_PERSONAL_USE_ONLY.otf);
+  }
+@font-face {
+    font-family: Espresso;
+    src: url(../fonts/Espresso\ Show.otf);
+  }
+  @font-face {
+    font-family: Dalty;
+    src: url(../fonts/Dalty.otf);
+  }
+body{
+    min-height: 100vh;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(68, 11, 11);
+}
+/* Navbar - start */
+nav{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 4px 10px rgb(31, 10, 10);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    font-size: larger;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+}
+nav li{
+    height: 175px;
+}
+nav a{
+    height: 100%;
+    padding: 0 100px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+
+}
+nav a:hover{
+    color: antiquewhite;
+    background-color: rgb(68, 11, 11);
+    transition: 0.4s;
+}
+nav .logo a:hover {
+    background-color: transparent ;
+}
+nav li:first-child{
+    margin-right: auto;
+}
+
+/* Navbar hidden - start */
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgb(255, 255, 255);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgb(31, 10, 10);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+.sidebar a:hover{
+    color: antiquewhite;
+    background-color: rgb(68, 11, 11);
+}
+.menu-button{
+    display: none;
+}
+/* Navbar hidden - end */
+
+/* Navbar responsivity - start */
+@media(max-width:1400px){
+    nav a{
+        padding: 0 60px;  
+    }
+}
+@media(max-width:1190px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+}
+@media(max-width:400px){
+    .sidebar{
+        width: 100%;;
+    }
+    
+}
+
+/* Navbar responsivity - end */
+/* Navbar - end */
+
+/* index page */
+/* Main - start */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* coffee 1 - start */
+.coffee {
+    flex: 1;
+    padding: 10% 5% 0 5%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(../img/coffee-background.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+.coffee-text{
+    max-width: 850px;
+}
+.coffee-text a {
+    display: inline-block;
+    padding: 15px 30px; 
+    background-color: rgb(73, 2, 7); 
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease; 
+}
+.coffee-text a:hover {
+    background-color:rgb(153, 118, 121);
+}
+.coffee-text h1{
+    font-family: Espresso;
+    font-size: 5em;
+}
+.coffee-text h2{
+    font-family: Espresso;
+    font-size: 4em;
+}
+.coffee-text p{
+    padding-top: 3%;
+    font-family: PepperidgeScript;
+    font-size: 5em;
+}
+.coffee-text p.txt2 {
+    font-size: 3em;
+}
+hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+/* coffee 1 - end */
+
+/* coffee 2 - start */
+.coffee-2{
+    flex: 1;
+    padding: 3% 5% 0 5%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.63)), url(../img/coffee-background-2.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+.coffee-text-0{
+    font-size: 3.4em;
+    font-family: PepperidgeScript;
+    max-width: 750px;
+    color: rgb(0, 0, 0); 
+}
+.coffee-text-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1110px; 
+}
+
+.coffee-text-2-1, .coffee-text-2-2 {
+    padding-bottom: 50px;
+    max-width: 500px;
+    font-family: PepperidgeScript;
+    color: rgb(73, 2, 7); 
+    font-size: 3em;
+    flex: 1; 
+}
+.coffee-text-2 h1{
+    font-family: Dalty;
+    font-size: 11em;
+    color: rgb(73, 2, 7); 
+}
+/* coffee 2 - end */
+/* Main - end */
+/* index page */
+
+/* kontakt page - start */
+/* form - start */
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #734d26; 
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #3e2723; 
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #5d4037;                                                                                                                                                                              
+}
+
+.error {
+    color: red;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.coffee-kontakt {
+    flex: 1;
+    padding: 10% 5% 0 5%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(../img/coffee-kontakt-background.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+/* Accordion */
+.accordion {
+    background-color: #3e2723;
+    color: white;
+    cursor: pointer;
+    padding: 14px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    transition: 0.4s;
+    margin-bottom: 16px;
+}
+
+.accordion:hover {
+    background-color: #5d4037;
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    margin-bottom: 16px;
+}
+
+.panel select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 8px; 
+}
+
+.panel option {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.panel option:hover {
+    background-color: #ddd;
+}
+.coffee-text-succes-kontakt{
+    width: 1500px;
+    font-family: PepperidgeScript ;
+    font-size: 8em;
+    
+}
+
+/* form - end */
+.coffee-text-kontakt{
+    padding-top: 5%;
+}
+/* kontakt page - end */
+
+/* order page - start */
+.coffee-order {
+    flex: 1;
+    padding: 10% 5% 0 5%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(../img/coffee-order-bacground.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.coffee-text-order {
+    padding-left: 50%;
+}
+/* Coffee Table - start */
+table {
+    width: 100%;
+    height: 40vh;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1); 
+}
+th{
+    background-color: rgb(53, 44, 39);
+    color: white;
+}
+th, td {
+    border: none;
+    padding: 12px;
+    text-align: left;
+}
+
+th h1, td h1 {
+    margin: 0; 
+    padding: 8px 12px; 
+    border-radius: 15px;
+    width: 150px;
+    height: 30px;
+    color: rgb(134, 119, 110);
+    background-color: rgb(53, 44, 39);
+    cursor: pointer;
+    text-align: center;
+}
+th h1:hover, td h1:hover {
+    background-color: rgb(134, 119, 110);
+    color: #ececec; 
+}
+
+tr:nth-child(even) {
+    background-color: rgb(134, 119, 110);
+    color: #ececec;
+}
+
+tr:nth-child(odd) {
+    background-color: #ececec;
+    color: rgb(134, 119, 110);
+}
+tr:nth-child(even):hover {
+    color: rgb(134, 119, 110);
+}
+tr:nth-child(odd):hover {
+    color: rgb(255, 255, 255);
+}
+
+tr:hover {
+    background-color: #4b4b4b;
+}
+
+.buy-now {
+    background-color: rgb(53, 44, 39);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.coffee-description {
+    overflow: hidden; 
+}
+
+.description {
+    border-radius: 15px;
+    background-color: rgb(134, 119, 110);
+    padding: 12px;
+    max-width: 100%;
+}
+/* Coffee Table - end */
+
+/* Responsivity order tabel - start */
+@media screen and (max-width: 1900px) {
+    .coffee-text-order {
+        padding-top: 10%;
+    }
+
+    table {
+        height: 40vh;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .coffee-text-order {
+        padding-left: 0;
+        padding-top: 20%;
+    }
+    table {
+        height: 40vh;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .coffee-text-order {
+        padding-left: 0;
+    }
+    table {
+        height: 40vh;
+    }
+}
+@media screen and (max-width: 768px) {
+    .coffee-text-order {
+        padding-left: 0;
+    }
+    table {
+        height: 40vh;
+    }
+}
+@media screen and (max-width: 690px) {
+    .coffee-text-order {
+        padding-left: 0;
+        padding-top: 40%;
+    }  
+    table {
+        height: 40vh;
+    }
+}
+/* Responsivity order tabel - end */
+/* order page - end */
+
+
+/* Responsivity main  - start */
+@media (max-width: 1900px) {
+    .coffee {
+        padding: 20% 5% 0 5%;
+        background-position-x: 1950px;
+    }
+}
+@media (max-width: 1700px) {
+    .coffee-text-succes-kontakt{
+        padding-top: 15%;
+        width: 750px;
+        font-size: 7em;
+        
+    }
+}
+@media (max-width: 1300px) {
+    .coffee {
+        padding: 20% 5% 0 5%;
+        background-position-x: 1350px;
+    }
+    .coffee-text-succes-kontakt{
+        padding-top: 15%;
+        width: 650px;
+        font-size: 5em;
+    }
+    .coffee-text-kontakt{
+        padding-top: 10%;
+    }
+}
+@media (max-width: 975px) {
+    .coffee {
+        padding: 30% 5% 0 5%;
+    }
+    .coffee-text-kontakt{
+        padding-top: 20%;
+    }
+}
+@media (max-width: 775px) {
+    .coffee {
+        padding: 40% 5% 0 5%;
+        background-position-x: 950px;
+    }
+    .coffee-text {
+        max-width: 100%;
+        float: none;
+        text-align: center;
+    }
+    .coffee-text p{
+        font-size: 3.5em;
+    }
+    .coffee-text p.txt2 {
+        font-size: 1.9em;
+    }
+
+    .coffee-text h1 {
+        font-size: 3em;
+    }
+    .coffee-text h2 {
+        font-size: 2.3em;
+    }
+    .coffee-text-2 h1 {
+        font-size: 8em;
+        text-align: center
+    }
+    .coffee-text-2 p {
+        font-size: 0.9em;
+        
+    }
+    .coffee-text-0{
+        font-size: 2.5em;
+        text-align: center
+    }
+    .coffee-text-succes-kontakt{
+        padding-top: 25%;
+        width: 550px;
+        font-size: 4em;
+        text-align: center;
+        
+    }
+    .coffee-text-kontakt{
+        padding-top: 30%;
+    }
+}
+@media (max-width: 545px) {
+    .coffee {
+        padding: 70% 5% 0 5%;
+
+
+    }
+
+    .coffee-text {
+        max-width: 100%;
+        float: none;
+        text-align: center;
+    }
+
+    .coffee-text h1 {
+        font-size: 2.2em;
+    }
+    .coffee-text-2 h1 {
+        font-size: 6em;
+        text-align: center
+
+    }
+    .coffee-text-2 p {
+        font-size: 0.7em;
+        
+    }
+    .coffee-text-0{
+        font-size: 2em;
+        text-align: center
+    }
+    .coffee-text-succes-kontakt{
+        padding-top: 30%;
+        width: 450px;
+        font-size: 4em;
+        text-align: center;
+
+        
+    }
+    .coffee-text-kontakt{
+        padding-top: 50%;
+    }
+}
+@media (max-width: 380px) {
+    .coffee-text-2 p {
+        font-size: 0.7em;
+        padding-left: 10px;
+    }
+    .coffee {
+        background-position-x: 820px;
+    }
+    .coffee-2{
+        background-position-x: 650px;
+        background-image: linear-gradient(rgba(248, 248, 248, 0.603), rgba(255, 255, 255, 0.815)), url(../img/coffee-background-2.jpg);
+        min-height: 100vh;
+    }
+    .coffee-text-succes-kontakt{
+        padding-top: 45%;
+        width: 250px;
+        font-size: 3em;
+        text-align: center;      
+    }
+    .coffee-text-kontakt{
+        padding-top: 60%;
+    }
+}
+
+/* Responsivity main - end */
+/* Main - end */
+
+/* Galeria page - start*/
+.coffe-galeria{flex: 1;
+padding: 10% 5% 0 5%;
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(../img/coffee-gallery.jpg);
+min-height: 100vh;
+background-size: cover;
+background-position: center;
+color: white;
+}
+.slideshow-container {
+    max-width: 550px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+.mySlides img{
+    border-radius: 15px;
+}
+
+.prev, .next {
+    position: absolute;
+    width: auto;
+    top: 50%;
+    margin-top: -30px;
+    padding: 16px;
+    cursor: pointer; 
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    color: white;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(85, 85, 85, 0.8);
+}
+/* Galeria page - end */
+
+/* Footer - start */
+/* Original styles */
+footer {
+    background-color: rgb(10, 0, 1);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 20px;
+    margin-bottom: 20px; 
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: inherit; 
+    transition: color 0.3s;
+}
+
+.footer-column h3 {
+    color: antiquewhite;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 8px;
+}
+
+.footer-info {
+    margin-top: 20px; 
+}
+
+.footer-column h3 {
+    font-size: 2em;
+}
+
+
+.footer-column a:hover {
+    color: antiquewhite;
+
+}
+
+/* Responsivity footer - start */
+@media (max-width: 768px) {
+    footer{
+        font-size: 0.9em;
+    }
+}
+/* Responsivity footer - end */
+/* Footer - end */
